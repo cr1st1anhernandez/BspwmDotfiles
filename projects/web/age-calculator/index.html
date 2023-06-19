@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="Css/Styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <lik rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet">
+    <title>Frontend Mentor | Age calculator app</title>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+  <div class="card">
+      <div class="card__date">
+        <label for="day" class="card__input-title">DAY</h2>
+          <input class="card__input" type="text" name="" id="day" placeholder="DD">
+      </div>
+      <div class="card__date">
+        <label for="month" class="card__input-title">MONTH</h2>
+          <input class="card__input" type="text" name="" id="month" value="" placeholder="MM">
+      </div>
+      <div class="card__date">
+        <label for="year" class="card__input-title">YEAR</h2>
+          <input class="card__input" type="text" name="" id="year" value="" placeholder="YYYY">
+      </div>
+    <p id="invalidDate" class="card__error">Error invalid dates</p>
+    <div class="card__line"></div>
+    <button id="button" type="submit" class="card__button">
+      <img src="assets/images/icon-arrow.svg" alt="decorative-icon">
+    </button>
+    <p class="card__output card__text-black"><span id="years" class="card__output">--</span> years</p>
+    <p class="card__output card__text-black"><span id="months" class="card__output">--</span> months</p>
+    <p class="card__output card__text-black"><span id="days" class="card__output">--</span> days</p>
+  </div>
+</body>
+
+</html>

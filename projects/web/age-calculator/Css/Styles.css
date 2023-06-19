@@ -1,0 +1,92 @@
+body {
+  background-color: hsl(0, 0%, 86%);
+  font-family: "Poppins", sans-serif;
+}
+body .card {
+  width: 700px;
+  background: #ffffff;
+  margin: 150px auto 0;
+  border-radius: 20px 20px 120px 20px;
+  padding: 30px;
+}
+body .card__date {
+  width: 25%;
+  display: inline-block;
+}
+body .card__input-title {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: hsl(0, 1%, 44%);
+}
+body .card__text-error {
+  color: red;
+}
+body .card__error {
+  display: none;
+  text-align: center;
+  align-items: center;
+  padding: 10px 0;
+  color: white;
+  background-color: red;
+  width: 72%;
+  height: 30px;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+body .card__error-active {
+  display: inline-block;
+}
+body .card__input {
+  height: 30px;
+  width: 60%;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: hsl(0, 0%, 86%);
+}
+body .card__input-error {
+  border-color: red;
+  color: red;
+}
+body .card__input:focus {
+  outline: none;
+  cursor: pointer;
+  border-color: hsl(259, 100%, 65%);
+}
+body .card__line {
+  width: 80%;
+  height: 1px;
+  background-color: hsl(0, 0%, 86%);
+  display: inline-block;
+}
+body .card__button {
+  display: inline-block;
+  background-color: hsl(259, 100%, 65%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  padding: 20px;
+  transition: background-color 0.2s ease-out;
+}
+body .card__output {
+  color: hsl(259, 100%, 65%);
+}
+body .card .card__button:hover {
+  background-color: #000000;
+  cursor: pointer;
+}
+body .card__output {
+  margin: 0;
+  line-height: 120px;
+  padding: 0;
+  font-size: 100px;
+  font-weight: 800;
+}
+body .card__text-black {
+  color: #000;
+}
+
+/*# sourceMappingURL=Styles.css.map */

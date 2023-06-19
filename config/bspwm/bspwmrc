@@ -1,0 +1,54 @@
+#! /bin/sh
+# Start sxhkd if it is not already running
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Set border settings
+bspc config border_width         2
+bspc config window_gap           8
+bspc config normal_border_color \#000000
+bspc config active_border_color \#B2BBE5
+bspc config focused_border_color \#B2BBE5
+
+# Set focus settings
+bspc config focus_follows_pointer true
+bspc config pointer_follows_focus true
+
+# Set tiling settings
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# Start some nice programs
+eww daemon &
+mate-polkit &
+xfce4-power-manager &
+xsetroot -cursor_name left_ptr &
+parcellite &
+noisetorch -i &
+solaar -w hide &
+xmodmap ~/.xmodmaprc &
+picom --experimental-backends -b &
+ukui-window-switch &
+
+# Set wallpaper
+feh --bg-fill ~/.wallpapers/wallpaper_cold.png
+
+# Wait 1 second and then run the bspfloat script to enable floating windows.
+# Redirect error output to ~/.log.bspfloat.txt
+sleep 1 && $HOME/.config/bspwm/scripts/bspfloat floating 5 &> $HOME/.log.bspfloat.txt &
+
+# Set monitor and desktop layout
+if xrandr -q | grep 'HDMI-1 connected'; then
+    bspc monitor HDMI-1 -d 1 2 3 4 5
+    bspc monitor eDP-1 -d 1 2 3 4 5
+    polybar bar_monitor &
+    polybar bar_laptop &
+    xrandr --output eDP-1 --mode 1920x1080 --pos 0x1080 --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 --left-of eDP-1
+else
+    polybar bar_laptop &
+    bspc monitor eDP-1 -d 1 2 3 4 5
+    xrandr --output eDP --primary --mode 1920x1080
+fi
+
+xmodmap -e "keycode 52 = z Z z Z less less"
+xmodmap -e "keycode 53 = x X x X greater greater"

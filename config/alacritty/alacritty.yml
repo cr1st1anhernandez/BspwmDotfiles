@@ -1,0 +1,44 @@
+colors:
+  primary:
+    background: "#11111B"
+    foreground: "#788199"
+  normal:
+    black: "0x101010"
+    red: "#ff5560"
+    green: "#029891"
+    yellow: "#f7e255"
+    blue: "#788199"
+    magenta: "#af77ff"
+    cyan: "#3ba5b8"
+    white: "#D0D0D0"
+  bright:
+    black: "0x434758"
+    red: "#ff3b48"
+    green: "#03c0b7"
+    yellow: "#fa9242"
+    blue: "#97a3c3"
+    magenta: "#BD93F9"
+    cyan: "#41b9cf"
+    white: "0xffffff"
+font:
+  bold:
+    family: CaskaydiaCove Nerd Font
+    style: Bold
+  bold_italic:
+    family: CaskaydiaCove Nerd Font
+    style: Bold Italic
+  italic:
+    family: CaskaydiaCove Nerd Font
+    style: Italic
+  normal:
+    family: CaskaydiaCove Nerd Font
+    style: Regular
+  size: 15.0
+window:
+  opacity: 1
+  padding:
+    x: 1
+    y: 1
+
+key_bindings:
+  - { key: Return, mods: Super|Shift, action: SpawnNewInstance }
