@@ -157,7 +157,8 @@ xdg-user-dirs-update
 
 
 ## Desktop:
-<p align="center"><img src="https://raw.githubusercontent.com/cr1st1anhernandez/dotfiles/main/wallpapers/home.png" width="1200"/></p>
+
+![Desktop](./wallpapers/home.png)
 
 ## Credits:
 
